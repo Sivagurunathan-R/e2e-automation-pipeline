@@ -5,7 +5,7 @@ node {
     }
     stage('Smoke') {
         try {
-            sh "mvn clean verify -Dtags='type:Smoke'"
+            bat "mvn clean verify -Dtags='type:Smoke'"
         } catch (err) {
 
         } finally {
@@ -18,7 +18,7 @@ node {
     }
     stage('API') {
         try {
-            sh "mvn clean verify -Dtags='type:API'"
+            bat "mvn clean verify -Dtags='type:API'"
         } catch (err) {
 
         } finally {
@@ -31,7 +31,7 @@ node {
     }
     stage('UI') {
         try {
-            sh "mvn clean verify -Dtags='type:UI'"
+            bat "mvn clean verify -Dtags='type:UI'"
         } catch (err) {
 
         } finally {
